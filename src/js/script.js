@@ -97,7 +97,7 @@
       thisProduct.initOrderForm();
       thisProduct.initAmountWidget();
       thisProduct.processOrder();
-      console.log('new product: ', thisProduct);
+      //console.log('new product: ', thisProduct);
     }
 
     renderInMenu() {
@@ -263,9 +263,7 @@
       price *= thisProduct.amountWidgetElem.value;
 
       this.priceElem.innerHTML = price;
-
-      console.log('price', price);
-
+      
     }
 
     initAmountWidget() {
@@ -289,8 +287,8 @@
       thisWidget.getElements(element);
       thisWidget.setValue(thisWidget.input.value);
       thisWidget.initActions();
-      console.log('Amount Widget: ', thisWidget);
-      console.log('constructor arguments', element);
+      //console.log('Amount Widget: ', thisWidget);
+      //console.log('constructor arguments', element);
     }
 
     getElements(element) {
