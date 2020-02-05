@@ -260,7 +260,7 @@
       }
 
       /* multiply price by amount */
-      price *= thisProduct.amountWidgetElem.value;
+      price *= thisProduct.amountWidget.value;
 
       this.priceElem.innerHTML = price;
       
