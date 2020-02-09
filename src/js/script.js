@@ -483,12 +483,12 @@
         subtotalPrice: thisCart.subtotalPrice,
         totalNumber: thisCart.totalNumber,
         deliveryFee: thisCart.deliveryFee,
-        //product: chosenProduct.getData(),
+        products: [],
       };
 
-      //for (let chosenProduct in thisCart.products) {
-      //chosenProduct.getData();
-      //}
+      for (let product in thisCart.products) {
+        payload.products.push(thisCart.products[product]);
+      }
 
       const options = {
         method: 'POST',
@@ -549,8 +549,10 @@
 
     }
 
-    getData() {
-      //const thisCartProduct = this;
+    getData(menuProduct) {
+      const thisCartProduct = this;
+      thisCartProduct.id = menuProduct.id;
+      thisCartProduct.name = menuProduct.name;
     }
 
     initAmountWidget() {
