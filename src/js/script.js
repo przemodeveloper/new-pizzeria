@@ -361,6 +361,7 @@
 
         thisWidget.setValue(thisWidget.value - 1);
 
+
       });
 
       thisWidget.linkIncrease.addEventListener('click', function(event) {
@@ -399,14 +400,19 @@
     update() {
       const thisCart = this;
 
+      console.log('cart', thisCart);
+
       thisCart.totalNumber = 0;
       thisCart.subtotalPrice = 0;
 
       for (let product in thisCart.products) {
+
+        console.log('produkt', product);
         
         thisCart.subtotalPrice = thisCart.subtotalPrice + thisCart.products[product].price;
 
         thisCart.totalNumber = thisCart.totalNumber + thisCart.products[product].amount;
+        
       }
 
       if (thisCart.subtotalPrice == 0) {
@@ -486,8 +492,9 @@
         products: [],
       };
 
-      for (let product in thisCart.products) {
-        payload.products.push(thisCart.products[product]);
+      for (let product of thisCart.products) {
+        const productData = product.getData();
+        payload.products.push(productData);
       }
 
       const options = {
@@ -549,10 +556,17 @@
 
     }
 
-    getData(menuProduct) {
+    getData() {
       const thisCartProduct = this;
-      thisCartProduct.id = menuProduct.id;
-      thisCartProduct.name = menuProduct.name;
+
+      return [
+        thisCartProduct.id,
+        thisCartProduct.name,
+        thisCartProduct.price,
+        thisCartProduct.priceSingle,
+        thisCartProduct.amount,
+        thisCartProduct.params,
+      ];
     }
 
     initAmountWidget() {
