@@ -51,7 +51,6 @@ const app = {
 
     
   },
-
   initBooking: function() {
     const thisApp = this;
 
@@ -59,7 +58,6 @@ const app = {
     thisApp.booking = new Booking(bookingElem);
 
   },
-
   activatePage: function(pageId) {
     const thisApp = this;
 
