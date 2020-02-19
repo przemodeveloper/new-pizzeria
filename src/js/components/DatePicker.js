@@ -34,7 +34,7 @@ class DatePicker extends BaseWidget {
       },
       onChange: function(dateStr) {
         thisWidget.value = dateStr;
-        console.log('value', thisWidget.minDate);
+        //console.log('value', thisWidget.minDate);
       }
     });
   }
