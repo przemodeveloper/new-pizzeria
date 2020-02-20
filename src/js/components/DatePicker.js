@@ -33,8 +33,8 @@ class DatePicker extends BaseWidget {
         'firstDayOfWeek': 1 
       },
       onChange: function(dateStr) {
-        thisWidget.value = dateStr;
-        //console.log('value', thisWidget.minDate);
+        thisWidget.value = utils.dateToStr(dateStr[0]);
+        console.log('value', thisWidget.value);
       }
     });
   }

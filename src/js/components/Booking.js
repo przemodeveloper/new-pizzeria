@@ -13,6 +13,7 @@ class Booking {
     thisBooking.getData();
     thisBooking.indicateTable();
     thisBooking.initActions();
+    thisBooking.indicateCheckbox();
   }
   /* eslint-disable */
   getData() {
@@ -178,15 +179,42 @@ class Booking {
 
     thisBooking.dom.reserve = thisBooking.dom.wrapper.querySelector(select.booking.reserve);
 
-    
+    thisBooking.dom.waterCheckbox = document.getElementById("water");
+    thisBooking.dom.breadCheckbox = document.getElementById("bread");
+
+
+
   }
+
+  indicateCheckbox() {
+    const thisBooking = this;
+
+    const starters = ['water', 'bread'];
+
+    thisBooking.chosenStarters = [];
+
+    thisBooking.dom.waterCheckbox.addEventListener('click', function() {
+      if (thisBooking.dom.waterCheckbox.checked == true){
+        thisBooking.chosenStarters.push(starters[0]);
+      } else {
+        thisBooking.chosenStarter = null;
+      }
+    });
+
+    thisBooking.dom.breadCheckbox.addEventListener('click', function() {
+        if (thisBooking.dom.breadCheckbox.checked == true){
+          thisBooking.chosenStarters.push(starters[1]);
+        } else {
+          thisBooking.chosenStarter = null;
+        }
+      });
+    }
 
   indicateTable() {
     const thisBooking = this;
     for (let tab of thisBooking.dom.tables) {
       tab.addEventListener('click', function() {
-        let tableNumber = tab.getAttribute('data-table');
-        console.log('table no', tableNumber);
+        thisBooking.tableNumber = tab.getAttribute('data-table');
         if(!tab.classList.contains(classNames.booking.tableBooked)) {
           tab.classList.add(classNames.booking.tableBooked);
         } else {
@@ -196,6 +224,7 @@ class Booking {
     }
 
     console.log('thisBooking', thisBooking);
+
   }
 
   initActions() {
@@ -205,7 +234,6 @@ class Booking {
       event.preventDefault();
       thisBooking.sendReservation();
     });
-
   }
 
   sendReservation() {
@@ -214,8 +242,12 @@ class Booking {
 
     const payload = {
       id: thisBooking.id,
-      date: thisBooking.datePicker.correctValue,
-      hour: thisBooking.hour,
+      date: thisBooking.datePicker.value,
+      table: thisBooking.tableNumber,
+      hour: utils.numberToHour(thisBooking.hour),
+      duration: thisBooking.hoursAmount.value,
+      ppl: thisBooking.peopleAmount.value,
+      starters: thisBooking.chosenStarters,
     };
 
     const options = {
@@ -234,8 +266,6 @@ class Booking {
         console.log('parsedResponse', parsedResponse);
       });
   };
-
-
 
   initWidgets() {
     const thisBooking = this;
