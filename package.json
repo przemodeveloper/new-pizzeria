@@ -25,7 +25,7 @@
         "watch:browsersync": "browser-sync start --server dist --files \"dist/**/*\" --ignore \"dist/db/**/*\"",
         "watch:sassprefixer": "onchange \"src/sass/**/*.scss\" -- npm run build-dev",
         "watch:copy": "onchange -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" -- copyfiles -a -u 1 {{changed}} dist",
-        "start": "node front.js"
+        "start": "node server.js"
     },
     "keywords": [],
     "author": "",
