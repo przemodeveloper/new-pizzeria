@@ -122,9 +122,9 @@
 /* slideshow */
 
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1100px;
   position: relative;
-  margin-top: 550px;
+  margin-top: 480px;
 }
 
 /* Hide the images by default */
@@ -135,7 +135,7 @@
 .slidebox {
   display: flex;
   justify-content: center;
-  margin-left: 29px;
+  margin-left: 14px;
   width: 600px;
 }
 
@@ -265,7 +265,7 @@
   flex-direction: row;
   height: 225px;
   width: 200px;
-  top: 1250px;
+  top: 1370px;
 }
 
 .photo-inner:hover {
@@ -278,7 +278,7 @@
     flex-direction: row;
     height: 225px;
     width: 200px;
-    top: 1250px;
+    top: 1370px;
     transition: all 1s;
   }
 }
