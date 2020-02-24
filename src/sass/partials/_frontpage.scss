@@ -107,7 +107,7 @@
 /* slideshow */
 
 .slideshow-container {
-  width: 100%;
+  max-width: 760px;
   position: relative;
   margin-top: 200px;
 }
@@ -121,7 +121,7 @@
   display: flex;
   justify-content: center;
   margin-left: 14px;
-  width: 600px;
+  width: 100%;
 }
 
 .description {
@@ -192,3 +192,92 @@
   to {opacity: 1}
 }
 /* stylelint-enable */
+
+/* gallery */
+
+.pizzaphotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 760px;
+  margin-top: 150px;
+  margin-left: 10px;
+}
+
+.photo-inner {
+  margin: 0 2px 0 2px;
+}
+
+.photo-inner img {
+  height: 225px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: -5px;
+}
+
+.photo-inner:hover img {
+  background-color: grey;
+  height: 225px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: -5px;
+  opacity: 0.5;
+  transition: all 1s;
+}
+
+.final-box {
+  display: flex;
+  justify-content: center;
+  max-width: 760px;
+}
+
+.final-sentence {
+  display: flex;
+  margin-right: 445px;
+  color: #ff7675;
+  margin-left: 0;
+}
+
+.icons {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 225px;
+  width: 200px;
+  top: 1300px;
+}
+
+.photo-inner:hover {
+  .icons {
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 225px;
+    width: 200px;
+    top: 1300px;
+    transition: all 1s;
+  }
+}
+
+.icons .fas {
+  font-size: 30px;
+  padding: 10px;
+  margin-bottom: 45px;
+}
+
+.fa-heart {
+  color: #ff7675;
+}
+
+.fa-share-alt {
+  color: black;
+}
