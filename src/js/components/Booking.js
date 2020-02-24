@@ -209,12 +209,14 @@ class Booking {
         }
       });
     }
-
+    
   indicateTable() {
     const thisBooking = this;
+    thisBooking.tableArray = [];
     for (let tab of thisBooking.dom.tables) {
       tab.addEventListener('click', function() {
         thisBooking.tableNumber = tab.getAttribute('data-table');
+        thisBooking.tableArray.push(thisBooking.tableNumber);
         if(!tab.classList.contains(classNames.booking.tableBooked)) {
           tab.classList.add(classNames.booking.tableBooked);
         } else {
@@ -222,9 +224,7 @@ class Booking {
         }
       });
     }
-
     console.log('thisBooking', thisBooking);
-
   }
 
   initActions() {
@@ -243,7 +243,7 @@ class Booking {
     const payload = {
       id: thisBooking.id,
       date: thisBooking.datePicker.value,
-      table: thisBooking.tableNumber,
+      table: thisBooking.tableArray,
       hour: utils.numberToHour(thisBooking.hour),
       duration: thisBooking.hoursAmount.value,
       ppl: thisBooking.peopleAmount.value,
