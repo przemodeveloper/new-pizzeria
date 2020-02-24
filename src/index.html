@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+  
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
@@ -21,10 +21,116 @@
     </div>
   </header>
 
-    <section id="booking">
-      <div class="booking-wrapper container"></div>
+  <div class="booking-wrapper container">
+    
+    <section class="buttons_grid">
+      <div class="box-bigger">
+        <div class="box">
+          <div class="imagebox">
+            <img src="vendor/pizzaone.jpg" alt="pizza">
+            <a href="#" id="order-button">ORDER ONLINE</a>
+            <p class="sentence">Delicious food delivered to your door.</p>
+          </div>
+          <div class="imagebox">
+            <img src="vendor/pizzatwo.jpg" alt="pizza">
+            <a href="#" id="book-button">BOOK A TABLE</a>
+          </div>
+        </div>
+        <div class="new-box">
+          <h1>OPENING HOURS:</h1>
+          <h2>TUE-SUN, 12PM - 12AM</h2>
+      </div>
+      </div>
     </section>
 
+    <section class = "slideshow">
+      <div class="container">
+        <div class="slideshow-container">
+
+          <div class="slidebox">
+            <div class="mySlides fade">
+              <div class="photo">
+                <img src="vendor/slideshow/pizzaslide.jpg" style="width:45%">
+              </div>
+              <div class="description">
+                <h1 class="slidetitle">AMAZING SERVICE</h1>
+                <p class="slideparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="signature">- Bruce Wayne</p>
+              </div>
+            </div>
+            </div>
+
+          <div class="slidebox">
+            <div class="mySlides fade">
+              <div class="photo">
+                <img src="vendor/slideshow/pizzaslide.jpg" style="width:45%">
+              </div>
+              <div class="description">
+                <h1 class="slidetitle">GREAT FOOD</h1>
+                <p class="slideparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="signature">- Peter Parker</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slidebox">
+          <div class="mySlides fade">
+            <div class="photo">
+              <img src="vendor/slideshow/pizzaslide.jpg" style="width:45%">
+            </div>
+            <div class="description">
+              <h1 class="slidetitle">HIGH QUALITY</h1>
+              <p class="slideparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p class="signature">- Otto Octavius</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="photogrid">
+      <div class="container">
+        <div class="pizzaphotos">
+          <div class="photo-inner">
+            <img src="vendor/photogrid/pizzaimageone.jpg" alt="pizza">
+            <div class="icons">
+              <a href="#"><i class="fas fa-heart"></i></a>
+              <a href="#"><i class="fas fa-share-alt"></i></a>
+            </div>
+          </div>
+          <div class="photo-inner">
+            <img src="vendor/photogrid/pizzaimagetwo.jpg" alt="pizza">
+          </div>
+          <div class="photo-inner">
+            <img src="vendor/photogrid/pizzaimagethree.jpg" alt="pizza">
+          </div>
+          <div class="photo-inner">
+            <img src="vendor/photogrid/pizzaimagefour.jpg" alt="pizza">
+          </div>
+          <div class="photo-inner">
+            <img src="vendor/photogrid/pizzaimagefive.jpg" alt="pizza">
+          </div>
+          <div class="photo-inner">
+            <img src="vendor/photogrid/pizzaimagesix.jpg" alt="pizza">
+          </div>
+        </div>
+      </div>
+
+      <div class="final-box">
+        <a class="final-sentence" href="#">View more on Instagram</a>
+      </div>
+
+    </section>
+
+  </div>
 
   <script src="js/Front.js"></script>
 </body>
