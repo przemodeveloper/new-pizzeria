@@ -15,24 +15,29 @@
 .box {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   max-width: 760px;
   margin-top: -100px;
   padding: 0 20px;
 }
 
+.row-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
 
 .new-box {
-  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   color: white;
   background-color: #ff7675;
   width: 603px;
   height: 120px;
   border-radius: 5px;
-  margin-left: 30px;
 }
 
 .new-box h1 {
